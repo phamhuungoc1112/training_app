@@ -1,1 +1,1 @@
-# training_app
+# This is training app
