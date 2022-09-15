@@ -1,18 +1,24 @@
+# README
 
----------------- RUBY ON RAILS NOTES ----------------
-1. Models - Views - Controllers
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-1.1. Modeling 
-1.1.1. CRUD operations in rails console
-1.1.2. Data validations
-1.1.3. Adding secure password
+Things you may want to cover:
 
+* Ruby version
 
-2. Authentication
+* System dependencies
 
+* Configuration
 
+* Database creation
 
+* Database initialization
 
+* How to run the test suite
 
+* Services (job queues, cache servers, search engines, etc.)
 
+* Deployment instructions
 
+* ...
