@@ -50,6 +50,23 @@ footer ul {
     float: right; list-style: none;
 }
 footer ul li { float: left; margin-left: 15px;}
+@media (max-width: 800px) {
+    footer {
+        small {
+            display: block;
+            float: none;
+            margin-bottom: 1em;
+        }
+        ul {
+            float: none;
+            padding: 0;
+            li {
+                float: none;
+                margin-left: 0;
+            }
+        }
+    }
+}
 // img
 img {
     display: none;
@@ -107,7 +124,7 @@ input, textarea, select, .uneditable-input {
 input {
         height: auto !important;
 }
-/* forms */ 
+
 
 #error_explanation {
     color: red; ul {
