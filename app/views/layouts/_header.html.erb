@@ -14,7 +14,7 @@
               <li><%= link_to "home", root_path %></li>
               <li><%= link_to "detail", detail_path %></li>
               <li><%= link_to "products", 'products'%></li>
-              <% if logged_in? %>
+              <% if logged_in %>
                 <li><%= link_to "Users","#"%></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">

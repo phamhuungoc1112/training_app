@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   root 'pages#home'
   # get  '/home', to: 'pages#home'
   get '/detail', to: 'pages#detail'
-  get '/products', to: 'products#new'
+
   get '/signup', to: 'users#new'
   resources :users
-  resources :products, only: [:show]
+  resources :products
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'

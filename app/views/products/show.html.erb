@@ -4,3 +4,8 @@
 <h1>Show</h1>
 <p>Name: <%=@product.name%> </p>
 <p>Quanity: <%=@product.quanity%> </p>
+<%= link_to 'Edit',edit_product_path(@product)%> | 
+<%= link_to 'Delete', product_path(@product), method: :delete, data: { confirm: "are you sure"} %> |
+<%= link_to 'Return to product list', products_path%>
+
+
