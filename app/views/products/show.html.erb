@@ -2,6 +2,9 @@
 
 
 <h1>Show</h1>
+<h2>
+    <%= @product.user.name if @product.user%>
+</h2>
 <p>Name: <%=@product.name%> </p>
 <p>Quanity: <%=@product.quanity%> </p>
 <%= link_to 'Edit',edit_product_path(@product)%> | 
