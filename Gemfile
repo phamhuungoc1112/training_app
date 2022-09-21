@@ -5,10 +5,16 @@ ruby '3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.7'
+# image validation
+gem 'active_storage_validations'
+# image_proccessing
+gem 'image_processing', '~> 1.12.2'
+# mini magick
+gem 'mini_magick', '4.9.5'
 # bcrypt
 gem 'bcrypt', '~> 3.1.13'
 # gem fake
-gem 'faker', '2.1.2'
+gem 'faker', '2.23.0'
 # paginate
 gem 'will_paginate', '3.3.1'
 gem 'will_paginate-bootstrap', '1.0.2'

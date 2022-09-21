@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: %i[index edit update destroy]
+  # before_action :logged_in_user, only: %i[index edit update destroy]
   before_action :correct_user, only: %i[edit update]
   before_action :set_user, only: %i[show edit update destroy]
   before_action :admin_user, only: [:destroy]
@@ -8,9 +8,8 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.where(activated: FILL_IN).paginate(page: params[:page], per_page: 5)
-
-    # @users = User.all
+    # @users = User.where(activated: FILL_IN).paginate(page: params[:page], per_page: 5)
+    @users = User.paginate(page: params[:page])
   end
 
   def create
@@ -26,7 +25,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    redirect_to root_url and return unless FILL_IN
+    # redirect_to root_url and return unless FILL_IN
+
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
 
   def edit; end
@@ -54,14 +55,6 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
-  end
-
-  def logged_in_user
-    unless logged_in?
-      store_location
-      flash[:danger] = 'Please log in'
-      redirect_to login_url
-    end
   end
 
   def correct_user
